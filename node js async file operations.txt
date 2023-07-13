@@ -1,0 +1,35 @@
+//ASYNCHRONOUS
+//creating a folder
+fs.mkdir("Nielit",(err)=>
+{
+    console.log("Folder created successfully.")
+    console.log(err);
+})
+//CREATING A FILE
+fs.writeFile("Nielit/intro.txt","WELCOME TO NIELIT LKO.",(err)=>{
+    console.log("file created successfully")
+    console.log(err)
+})
+//APPEND
+fs.appendFile("Nielit/intro.txt"," This is full stack development with MERN course.",(err)=>{
+    console.log("appended");
+})
+//READING THE FILE
+fs.readFile("Nielit/intro.txt","utf-8",(err,data)=>
+{
+    console.log(data)
+})
+//RENAMING THE FILE
+fs.rename("Nielit/intro.txt","Nielit/myintro.txt",(err)=>{
+    console.log("FILE NAME CHANGED SUCCESSFULLY")
+})
+//deleting the file
+fs.unlink("Nielit/myintro.txt",(err)=>{
+    console.log("file deleted successfully")
+})
+
+//DELETING THE FOLDER
+fs.rmdir("Nielit",(err)=>
+{
+    console.log("folder deleted successfully")
+})
